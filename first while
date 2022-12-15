@@ -1,0 +1,6 @@
+while True:
+    print("hi")
+    inp = input("Shall we continue?")
+    if inp == "no":
+        break
+print("okay then")
