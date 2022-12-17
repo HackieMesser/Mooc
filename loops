@@ -10,3 +10,33 @@ while True:
         break
     elif num <0:
         print("Invalid number")
+
+#awful gotta be better than this holy cow
+year = int(input("Year: "))
+leap = False
+while True:
+    if year % 4== 0:
+        if year % 400 ==0 and year % 100 == 0:
+            leap = True
+            break
+        if year % 100 != 0 and year %4==0:
+            leap = True
+            break
+    else:
+        yearstill = year%4  
+        year2 = (4 - yearstill) + year 
+        break
+             
+if  leap == True:
+    if (year + 4)%100 == 0 and (year + 4)%400!=0 :
+        year2 = year + 8
+    else:
+        year2 = year +4 
+    print (f"The next leap year after {year} is {year2}")
+if leap == False:
+    if year2 %100 == 0 and (year2)%400!=0 : 
+        year2 = year2 + 4
+        print (f"The next leap year after {year} is {year2}")
+    else:
+        print (f"The next leap year after {year} is {year2}")
+#end aweful
