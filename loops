@@ -54,3 +54,16 @@ while True:
 
 print (f"The next leap year after {start} is {leap}") 
 #better way to do aweful end
+
+
+word = ""
+phrase = ""
+word1 = ""
+while True:
+    word = input("Please type in a word: ")
+    if word == "end" or word1 == word:
+        break
+    phrase = phrase + word + " " 
+    word1 = word
+    
+print (phrase)  
