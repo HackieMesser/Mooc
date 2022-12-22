@@ -67,3 +67,31 @@ while True:
     word1 = word
     
 print (phrase)  
+
+#mean, count, sum loop
+
+sumnum = 0
+meannum = 0
+posnum = 0
+negnum = 0
+typenum = 0
+print("Please type in integer numbers. Type in 0 to finish.")
+while True:
+    inputnum=int(input("Number: "))
+    if inputnum == 0:
+        break
+    else:
+        typenum+=1
+        sumnum+=inputnum
+        meannum=sumnum/typenum
+        if inputnum >0:
+            posnum+=1
+        else:
+            negnum+=1
+#print("... the program asks for numbers")
+print(f"Numbers typed in {typenum}")
+print(f"The sum of the numbers is {sumnum}")
+print(f"The mean of the numbers is {meannum}")
+print(f"Positive numbers {posnum}")
+print(f"Negative numbers {negnum}")
+
