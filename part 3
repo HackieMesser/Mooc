@@ -36,3 +36,16 @@ base = int(input("Base: "))
 while num <= limit:
     print(num)
     num*=base
+
+limit = int(input('Limit: '))
+num = 1
+sum = 1
+while num < limit:
+    sum+=1
+    num = num+sum
+print(num)
+
+
+
+
+
