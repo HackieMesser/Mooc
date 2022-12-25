@@ -45,6 +45,16 @@ while num < limit:
     num = num+sum
 print(num)
 
+limit = int(input('Limit: '))
+num = 1
+sum = 1
+string = "1"
+while num < limit:
+    sum+=1
+    string = f"{string} + {sum}"
+    num = num+sum
+print(f'The consecutive sum: {string} = {num}')
+
 
 
 
