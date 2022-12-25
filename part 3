@@ -30,4 +30,9 @@ while num <= limit:
     num*=2
 
 
-
+limit = int(input("Upper limit: "))
+num = 1
+base = int(input("Base: "))
+while num <= limit:
+    print(num)
+    num*=base
