@@ -15,3 +15,11 @@ while number > 0:
     print(number)
     number -=1
 print("Now!")
+
+
+num = int(input("Upper limit: "))
+num1 = 1
+while num> num1 > 0:
+    print(num1)
+    num1+=1
+    
