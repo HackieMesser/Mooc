@@ -72,3 +72,11 @@ elif len(y)>len(x):
     print(f'{y} is longer')
 else:
     print('The strings are equally long')
+    
+    
+    
+x = input('Please type in a string: ')
+index =-1
+while -len(x) <= index:
+    print(x[index])
+    index-=1
