@@ -33,6 +33,11 @@ while num <= limit:
 
 
 limit = int(input("Upper limit: "))
+
+
+width = int(input('Width: '))
+print('#'*width)
+
 num = 1
 base = int(input("Base: "))
 while num <= limit:
