@@ -82,3 +82,11 @@ index =-1
 while -len(x) <= index:
     print(x[index])
     index-=1
+
+
+x=input('Please type in a string: ')
+
+if len(x)>1 and x[1] == x[-2]:
+    print ('The second and the second to last characters are', x[1])
+else:
+    print('The second and the second to last characters are different')
