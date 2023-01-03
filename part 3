@@ -119,3 +119,20 @@ while True:
         break
     print(string)
     print((len(string))*"-")
+
+
+#right-aligned
+
+string = input("Please type in a string: ")
+while len(string) < 20:
+    string = '*'+ string
+print(string)
+
+#still 
+string = input("Please type in a string: ")
+
+string = (20-len(string))*'*'+string
+print(string)
+
+
+    
