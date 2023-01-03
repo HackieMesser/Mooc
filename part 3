@@ -103,3 +103,12 @@ start=0
 while start < height:
     print("#"*width)
     start+=1
+ 
+ string = input("Please type in a string: ")
+
+x=len(string)
+while x > 0:
+    print(string)
+    print('-'*x)
+    string = input("Please type in a string: ")
+    x=len(string)
