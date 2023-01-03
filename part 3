@@ -145,4 +145,12 @@ if len(word) == 27:
     word = word+" "
 print('*'+word+'*')    
 print(30*'*')
-    
+
+#Substrings, part 1
+
+x = input("Please type in a string: ")
+a=0
+b=0
+while len(x)>=b:
+    print(x[a:b])
+    b+=1
