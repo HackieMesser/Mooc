@@ -112,3 +112,10 @@ while x > 0:
     print('-'*x)
     string = input("Please type in a string: ")
     x=len(string)
+
+while True:
+    string = input("Please type in a string: ")
+    if string == "":
+        break
+    print(string)
+    print((len(string))*"-")
