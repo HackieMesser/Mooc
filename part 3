@@ -134,5 +134,15 @@ string = input("Please type in a string: ")
 string = (20-len(string))*'*'+string
 print(string)
 
+#A framed word
 
+word = input('Word: ')
+
+print(30*'*')
+while len(word)<27:
+    word = " " + word + " "
+if len(word) == 27:
+    word = word+" "
+print('*'+word+'*')    
+print(30*'*')
     
