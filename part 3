@@ -154,3 +154,12 @@ b=0
 while len(x)>=b:
     print(x[a:b])
     b+=1
+    
+ #Substrings, part 2
+ 
+x = input("Please type in a string: ")
+a=len(x)-1
+b=0
+while a>=0:
+    print(x[a:])
+    a-=1
