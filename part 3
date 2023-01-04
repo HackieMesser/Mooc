@@ -192,3 +192,12 @@ while index < len(v):
     else:
         print(f"{v[index]} not found")
     index+=1  
+#find the first substring
+
+string = input("Please type in a word: ")
+character = input("Please type in a character: ")
+leng = len(string)
+if character in string and string.find(character)<=leng-3:
+    index=string.find(character)
+    print(string[index:(index+3)])
+    
