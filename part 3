@@ -201,3 +201,13 @@ if character in string and string.find(character)<=leng-3:
     index=string.find(character)
     print(string[index:(index+3)])
     
+#Find all the substrings
+
+string = input("Please type in a word: ")
+character = input("Please type in a character: ")
+leng = len(string)
+while character in string and string.find(character)<=leng-3:
+    index=string.find(character)
+    print(string[index:(index+3)])
+    string=string[index+1:]
+    leng = len(string)
