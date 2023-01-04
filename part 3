@@ -219,3 +219,18 @@ while index<=len(string)-3:
     if character == string[index]:
         print(string[index:index+3])
     index+=1
+    
+#    The second occurrence
+string = input("Please type in a word: ")
+substring = input("Please type in a substring: ")
+if substring in string:
+    index1=string.find(substring)
+    index1+=len(substring)
+    string=string[index1:]
+    if substring in string:
+        print(f"The second occurrence of the substring is at index {string.find(substring)+index1}.")
+    else:
+        print("The substring does not occur twice in the string.")
+  #v2
+else:
+    print("The substring does not occur twice in the string.")
