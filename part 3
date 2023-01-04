@@ -234,3 +234,24 @@ if substring in string:
   #v2
 else:
     print("The substring does not occur twice in the string.")
+
+
+#3C
+#Multiplication
+a = 1
+b = 1
+limit1 = 1
+limit2 = 1
+x=int(input("Please type in a number"))
+
+while limit1 <= x:
+    while limit2<x:
+        print(f"{a} x {b} = {a*b}")
+        b+=1
+        limit2+=1
+    print(f"{a} x {b} = {a*b}")
+    a+=1
+    limit2=1
+    b=1
+    limit1+=1
+#v2
