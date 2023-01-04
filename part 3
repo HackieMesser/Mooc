@@ -180,3 +180,15 @@ if "o" in string:
     print("o found")
 else:
     print("o not found")    
+
+
+#v2
+string = input("Please type in a string: ")
+v="aeo"
+index=0
+while index < len(v):
+    if v[index] in string:
+        print(f"{v[index]} found")
+    else:
+        print(f"{v[index]} not found")
+    index+=1  
