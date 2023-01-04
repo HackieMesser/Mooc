@@ -255,3 +255,13 @@ while limit1 <= x:
     b=1
     limit1+=1
 #v2
+a = 1
+
+x=int(input("Please type in a number"))
+
+while a <= x:
+    b=1
+    while b<=x:
+        print(f"{a} x {b} = {a*b}")
+        b+=1
+    a+=1
