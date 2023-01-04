@@ -211,3 +211,11 @@ while character in string and string.find(character)<=leng-3:
     print(string[index:(index+3)])
     string=string[index+1:]
     leng = len(string)
+#v2
+string = input("Please type in a word: ")
+character = input("Please type in a character: ")
+index=0
+while index<=len(string)-3:
+    if character == string[index]:
+        print(string[index:index+3])
+    index+=1
