@@ -265,3 +265,13 @@ while a <= x:
         print(f"{a} x {b} = {a*b}")
         b+=1
     a+=1
+
+#First letters of words
+x = input("Please type in a sentance: ")
+index = 0
+
+print(x[0])
+while len(x[index:]) !=1:
+    x=x[index+1:]
+    if x[index] == " ":
+        print(x[index+1])
