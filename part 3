@@ -275,3 +275,16 @@ while len(x[index:]) !=1:
     x=x[index+1:]
     if x[index] == " ":
         print(x[index+1])
+
+#Factorial
+while True:
+    x = int(input("Please type in a number: "))
+    og=x
+    num = x
+    if x <= 0:
+        break
+    while x>1:
+        x-=1
+        num = num *x
+    print(f"The factorial of the number {og} is {num}")
+print("Thanks and bye!")
