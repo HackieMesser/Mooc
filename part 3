@@ -288,3 +288,26 @@ while True:
         num = num *x
     print(f"The factorial of the number {og} is {num}")
 print("Thanks and bye!")
+
+#Flip the pairs
+
+x = int(input("Please type in a number: "))
+a=1
+b=2
+index=x
+if x>=2:
+    print(b)
+    print(a)
+else:
+    print(a)
+while True:
+    if a>index:
+        break
+    a+=2
+    if b>index:
+        break
+    b+=2
+    if b<=index:
+        print(b)
+    if a<=index:    
+        print(a)   
