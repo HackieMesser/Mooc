@@ -323,3 +323,18 @@ while x>=index+1:
     index+=2
 if index<=x:
     print(x)
+
+
+
+#taking turns
+
+x = int(input("Please type in a number: "))
+index=1
+rindex=x
+while rindex>index:
+    print(index)
+    print(rindex)
+    index+=1
+    rindex-=1
+if index==rindex:
+    print(index)
