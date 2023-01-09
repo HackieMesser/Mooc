@@ -311,3 +311,15 @@ while True:
         print(b)
     if a<=index:    
         print(a)   
+
+#Flip the pairs
+
+x = int(input("Please type in a number: "))
+index=1
+
+while x>=index+1:
+    print(index+1)
+    print(index)
+    index+=2
+if index<=x:
+    print(x)
