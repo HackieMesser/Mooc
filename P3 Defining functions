@@ -41,3 +41,13 @@ def print_many_times(a,b):
 
 if __name__ == "__main__":
     print_many_times("python", 5)
+
+#A square of hashes
+
+def hash_square(a):
+    b=a
+    while b>0:
+        print("#"*a)
+        b-=1
+if __name__ == "__main__":
+    hash_square(5)
