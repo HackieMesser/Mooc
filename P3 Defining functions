@@ -30,3 +30,14 @@ def mean(a,b,c):
 
 if __name__ == "__main__":
     mean(1, 2, 3)
+
+
+def print_many_times(a,b):
+
+    while b>0: 
+        print(a)
+        b-=1
+
+
+if __name__ == "__main__":
+    print_many_times("python", 5)
