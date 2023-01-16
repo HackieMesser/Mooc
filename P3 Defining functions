@@ -51,3 +51,31 @@ def hash_square(a):
         b-=1
 if __name__ == "__main__":
     hash_square(5)
+
+
+#Chessboard
+def chessboard(a):
+    index=0
+    b=a
+    p=""
+    one="1"
+    zero="0"
+    switch=2
+    while a>0:
+        while index<b and switch%2==0:
+            if index %2==0:
+                p+=one
+            else:
+                p+=zero
+            index+=1
+        while index<b and switch%2!=0:
+            if index %2==0:
+                p+=zero
+            else:
+                p+=one
+            index+=1
+        print(p)
+        switch+=1
+        a-=1
+        index=0
+        p=""
