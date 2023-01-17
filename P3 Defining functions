@@ -101,3 +101,14 @@ def chessboard(x):
         else:
             print((string[0:x]))
         index+=1
+
+
+#A word squared
+def squared(a,b):
+    string=a*(b*b)
+    index=0
+    strindex=0
+    while index<b:
+        print(string[strindex:b+strindex])
+        strindex+=b 
+        index+=1
