@@ -91,3 +91,13 @@ def chessboard(x):
         else:
             print(zeros[0:x])
         index+=1
+#better
+def chessboard(x):
+    string="01"*x
+    index=0
+    while index<x:
+        if index%2==0:
+            print((string[1:x+1]))
+        else:
+            print((string[0:x]))
+        index+=1
