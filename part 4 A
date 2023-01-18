@@ -7,3 +7,13 @@ while True:
     else:
         print("not good")
 print("an excellent choice!")
+
+
+editor = input("Editor: ").lower()
+while editor!= "visual studio code":
+    if editor == "notepad" or editor == "word":
+        print("awful")
+    else:
+        print("not good")
+    editor = input("Editor: ").lower()
+print("an excellent choice!")
