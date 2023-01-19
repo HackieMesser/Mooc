@@ -1,3 +1,5 @@
+#part04-02_line
+
 def  line(a: int, b: str):
     index=0
     x=""
@@ -9,5 +11,17 @@ def  line(a: int, b: str):
             x+=("*")
         index+=1 
     print(x)   
+if __name__ == "__main__":
+    line(4,"")
+#another way
+def  line(a: int, b: str):
+    
+    #while index<a:
+  
+    if b!= "":
+        x=(str(b[0]))
+    else:
+        x=("*")
+    print(x*a)   
 if __name__ == "__main__":
     line(4,"")
