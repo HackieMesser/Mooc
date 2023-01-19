@@ -1,0 +1,13 @@
+def  line(a: int, b: str):
+    index=0
+    x=""
+    while index<a:
+    #for x in a:
+        if b!= "":
+             x+=(str(b[0]))
+        else:
+            x+=("*")
+        index+=1 
+    print(x)   
+if __name__ == "__main__":
+    line(4,"")
