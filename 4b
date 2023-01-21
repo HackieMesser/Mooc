@@ -63,3 +63,23 @@ def box_of_hashes(height):
 # You can test your function by calling it within the following block
 if __name__ == "__main__":
     box_of_hashes(5)
+
+#square of hashes
+
+def  line(a: int, b: str):
+      
+    if b!= "":
+        x=(str(b[0]))
+    else:
+        x=("*")
+    print(x*a)   
+def  square_of_hashes(size):
+    index=0
+    while index<size:
+        line(size, "#")
+        index+=1
+
+
+# You can test your function by calling it within the following block
+if __name__ == "__main__":
+    square_of_hashes(5)
