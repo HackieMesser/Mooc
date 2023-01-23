@@ -116,3 +116,26 @@ def triangle(size):
     while x<=size:
         line(x, "#")
         x+=1
+#shape
+def  line(a: int, b: str):
+      
+    if b!= "":
+        x=(str(b[0]))
+    else:
+        x=("*")
+    print(x*a)
+def triangle(a,b):
+    x=1
+    while x<=a:
+        line(x, b)
+        x+=1
+def square(a,c,d):
+    index=0
+    while index<c:
+        line(a, d)
+        index+=1
+def shape(a,b,c,d):
+    triangle(a,b)
+    square(a,c,d)         
+if __name__ == "__main__":
+    shape(5, "x", 2, "o")
