@@ -33,6 +33,16 @@ def  line(a: int, b: str):
   
     if b!= "":
         x=(str(b[0]))
+        
+# greatest number
+def greatest_number(a,b,c):
+    if a>b and a >c:
+        return a 
+    elif b>c and b>c:
+        return b 
+    else:
+        return c
+        
     else:
         x=("*")
     print(x*10)   
