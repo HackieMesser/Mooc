@@ -169,3 +169,15 @@ if __name__ == "__main__":
 if __name__ == "__main__":
     greatest = greatest_number(5, 4, 8)
     print(greatest)
+
+#same_char
+def same_chars(a: str, b: int, c: int):
+    if (len(a))> b and (len(a))>c:
+        if a[b] == a[c]:
+            return True
+        else:
+            return False
+    else:
+        return False
+if __name__ == "__main__":
+    print(same_chars("coder", 1, 2))
