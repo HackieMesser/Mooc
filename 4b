@@ -216,3 +216,38 @@ if __name__ == "__main__":
     print(first_word(sentence))
     print(second_word(sentence))
     print(last_word(sentence))
+
+
+def first_word(sentance):
+    index=0
+    i2=0
+    while sentance[i2] !=" ":
+        i2+=1
+    #i2+=1
+    return sentance[index:i2]
+
+def second_word(sentance):
+    index=0
+    i2=0
+    while sentance[index] !=" ":
+        index+=1
+    index+=1
+    i2=index
+    while i2<len(sentance) and sentance[i2]!=" ":
+        i2+=1
+    return sentance[index:i2]
+
+
+def last_word(sentance):
+    index=-1
+    i2=len(sentance)+1
+    while sentance[index] !=" ":
+        index-=1
+    index+=1
+    return sentance[index:i2]
+
+if __name__ == "__main__":
+    sentence = "once upon"
+    print(first_word(sentence))
+    print(second_word(sentence))
+    print(last_word(sentence))
