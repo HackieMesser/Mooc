@@ -150,11 +150,14 @@ def  line(a: int, b: str):
     print(x*a)
 
 def spruce(c: int):
+    print("a spruce!")
     index=0
+    stars='*'
     while index<c:
-        print(" "*(c-index)+("*")*index+" "*(c-index))
+        print(" "*(c-index)+(stars)+" "*(c-index))
         index+=1
-    print(" "*(c//2)+" "*(c//2)+" ")
+        stars+="**"
+    print(" "*(c)+"*"+ " "*(c))
 
 
 if __name__ == "__main__":
