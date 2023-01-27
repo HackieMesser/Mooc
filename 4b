@@ -179,3 +179,40 @@ def same_chars(a: str, b: int, c: int):
    
 if __name__ == "__main__":
     print(same_chars("coder", 1, 2))
+
+
+#first second last
+def first_word(sentance):
+    index=0
+    i2=0
+    while sentance[i2] !=" ":
+        i2+=1
+    #i2+=1
+    return sentance[index:i2]
+    
+def second_word(sentance):
+    index=0
+    i2=0
+    while sentance[index] !=" ":
+        index+=1
+    index+=1
+    i2=index
+    while sentance[i2]!=" ":
+        i2+=1
+    #i2+=1
+    return sentance[index:i2]
+
+
+def last_word(sentance):
+    index=-1
+    i2=len(sentance)+1
+    while sentance[index] !=" ":
+        index-=1
+    index+=1
+    return sentance[index:i2]
+
+if __name__ == "__main__":
+    sentence = "once upon a time there was a programmer"
+    print(first_word(sentence))
+    print(second_word(sentence))
+    print(last_word(sentence))
