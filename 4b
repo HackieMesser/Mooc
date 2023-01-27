@@ -139,3 +139,24 @@ def shape(a,b,c,d):
     square(a,c,d)         
 if __name__ == "__main__":
     shape(5, "x", 2, "o")
+
+#almost
+def  line(a: int, b: str):
+      
+    if b!= "":
+        x=(str(b[0]))
+    else:
+        x=("*")
+    print(x*a)
+
+def spruce(c: int):
+    index=0
+    while index<c:
+        print(" "*(c-index)+("*")*index+" "*(c-index))
+        index+=1
+    print(" "*(c//2)+" "*(c//2)+" ")
+
+
+if __name__ == "__main__":
+    spruce(5)
+    
