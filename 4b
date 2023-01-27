@@ -172,12 +172,10 @@ if __name__ == "__main__":
 
 #same_char
 def same_chars(a: str, b: int, c: int):
-    if (len(a))> b and (len(a))>c:
-        if a[b] == a[c]:
-            return True
-        else:
+    if (len(a))<= b or (len(a))<=c:
             return False
     else:
-        return False
+        return a[b]==a[c]
+   
 if __name__ == "__main__":
     print(same_chars("coder", 1, 2))
