@@ -141,24 +141,16 @@ if __name__ == "__main__":
     shape(5, "x", 2, "o")
 
 #spruce
-#works but kinda shitty
-def  line(a: int, b: str):
-      
-    if b!= "":
-        x=(str(b[0]))
-    else:
-        x=("*")
-    print(x*a)
-
+#works better
 def spruce(c: int):
     print("a spruce!")
     index=0
     stars='*'
     while index<c:
-        print(" "*(c-index-1)+(stars)+" "*(c-index-1))
+        print(" "*(c-index-1)+(stars))
         index+=1
         stars+="**"
-    print(" "*(c-1)+"*"+ " "*(c-1))
+    print(" "*(c-1)+"*")
 
 
 if __name__ == "__main__":
