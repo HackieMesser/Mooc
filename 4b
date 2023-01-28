@@ -251,3 +251,14 @@ if __name__ == "__main__":
     print(first_word(sentence))
     print(second_word(sentence))
     print(last_word(sentence))
+
+
+#Change the value of an item
+val_list=[1,2,3,4,5]
+while True:
+    index=int(input("Index: "))
+    if index == -1:
+        break
+    new=int(input("New value: "))
+    val_list[index]=new
+    print(val_list)
