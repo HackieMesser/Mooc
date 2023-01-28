@@ -262,3 +262,13 @@ while True:
     new=int(input("New value: "))
     val_list[index]=new
     print(val_list)
+
+#Add items to a list
+num_items=int(input("How many items: "))
+list_items=[]
+index=1
+while index<=num_items:
+    a=int(input(f"Item {index}: "))
+    list_items.append(a)
+    index+=1
+print(list_items)
