@@ -1,5 +1,5 @@
 #some of these 4c are in 4b
-#additon and removal
+#addtion and removal
 list_a=[]
 print("The list is now",list_a)
 add_remove_exit=input("a(d)d, (r)emove or e(x)it: ")
