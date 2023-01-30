@@ -71,3 +71,5 @@ def range_of_list(a:list):
     a.sort()
     return a[-1]-a[0]
 #better
+def range_of_list(a:list):
+    return max(a)-min(a)
