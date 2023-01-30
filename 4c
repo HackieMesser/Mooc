@@ -48,7 +48,6 @@ while True:
 print("You typed in",len(my_list),"different words")
 
 #list_twice
-my_list=[]
 new_item=""
 while True:
     new_item=int(input("New item: "))
