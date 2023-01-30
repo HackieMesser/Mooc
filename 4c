@@ -62,4 +62,7 @@ print("Bye!")
 #length of list
 def length(a: list):
    return  len(a)
+#mean
+def mean(a: list):
+   return  sum(a)/len(a)
 
