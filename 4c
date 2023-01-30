@@ -57,3 +57,9 @@ while True:
     print(f"The list now: {my_list}")
     print(f"The list in order: {(sorted(my_list))}")
 print("Bye!")
+
+
+#length of list
+def length(a: list):
+   return  len(a)
+
