@@ -66,3 +66,8 @@ def length(a: list):
 def mean(a: list):
    return  sum(a)/len(a)
 
+#range of list
+def range_of_list(a:list):
+    a.sort()
+    return a[-1]-a[0]
+#better
