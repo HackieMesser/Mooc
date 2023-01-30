@@ -25,3 +25,14 @@ while add_remove_exit!= "x":
         print(f"The list is now {list_a}")
     add_remove_exit=input("a(d)d, (r)emove or e(x)it: ")
 print("Bye!")
+
+#sameword twice
+my_list =[]
+index=0
+while True:
+    word = input("Word:")
+    if word in my_list:
+        break
+    my_list.append(word)
+    index +=1
+print("You typed in",index,"different words")
