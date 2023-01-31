@@ -73,3 +73,8 @@ def range_of_list(a:list):
 #better
 def range_of_list(a:list):
     return max(a)-min(a)
+#star studded
+string=input("Please type in a string: ")
+for x in string:
+    print(x)
+    print("*")
