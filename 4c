@@ -100,8 +100,6 @@ if __name__ == "__main__":
 
 #anagrams
 def anagrams(a: str,b: str):
-    a = sorted(a)
-    b = sorted(b)
-    return a == b 
+    return sorted(a) == sorted(b) 
 if __name__ == "__main__":
     print(anagrams("rey","yer"))
