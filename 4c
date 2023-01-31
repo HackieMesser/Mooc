@@ -146,3 +146,18 @@ def sum_of_positives(a: list):
         else:
             continue
     return x
+
+#sum_of_lists
+def list_sum(a,b):
+    x=[]
+    c=0
+    index=0
+    for i in a:
+        c=i+(b[index])
+        x.append(c)
+        index+=1
+    return x 
+if __name__ == "__main__":
+    a = [1, 2, 3, 4, 5]
+    b= [1, 2, 3, 4, 5]
+    list_sum(a,b)
