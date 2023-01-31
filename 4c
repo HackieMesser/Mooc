@@ -97,3 +97,11 @@ def list_of_stars(a:list):
         print("*"*i)
 if __name__ == "__main__":
     list_of_stars(1)
+
+#anagrams
+def anagrams(a: str,b: str):
+    a = sorted(a)
+    b = sorted(b)
+    return a == b 
+if __name__ == "__main__":
+    print(anagrams("rey","yer"))
