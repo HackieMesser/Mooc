@@ -109,8 +109,9 @@ def main(a):
     return a 
 def palindromes(a):
     main(a)
-    for i in range(len(a),0,-1):
+    for i in range(a,-1):
         x=""
+        str(i)
         x=x+"i"
         if a==x:
             print(f"{a} is a palindrome!")
