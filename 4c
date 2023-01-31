@@ -161,3 +161,20 @@ if __name__ == "__main__":
     a = [1, 2, 3, 4, 5]
     b= [1, 2, 3, 4, 5]
     list_sum(a,b)
+
+#distinct numbers
+def distinct_numbers(a):
+    a.sort()
+    c=""
+    x=[]
+    index=0
+    for i in range(len(a)):
+        if c!= a[i]:
+            x.append(a[i])
+            c=a[i]
+        else:
+            continue
+    return x
+if __name__ == "__main__":
+    a = [1, 2, 3, 4, 5]
+    distinct_numbers(a)
