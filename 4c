@@ -120,3 +120,21 @@ def palindromes(a):
 if __name__ == "__main__":
     palindromes("aa")
 
+#palindromes
+def palindromes(word: str):
+    x=""
+    for i in reversed(word):
+        i=str(i)
+        x+=i
+    return word==x
+def main():
+    while True:
+        word=input("Please type in a palindrome: ")
+        if palindromes(word) == True:
+            print(word, "is a palindrome!")
+            break
+        else:
+            print("that wasn't a palindrome")
+main()    
+
+
