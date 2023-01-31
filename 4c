@@ -103,3 +103,18 @@ def anagrams(a: str,b: str):
     return sorted(a) == sorted(b) 
 if __name__ == "__main__":
     print(anagrams("rey","yer"))
+#palindromes
+def main(a):
+    a=input("Please type in a palindrome: ")
+    return a 
+def palindromes(a):
+    main(a)
+    for i in range(len(a),0,-1):
+        x=""
+        x=x+"i"
+        if a==x:
+            print(f"{a} is a palindrome!")
+        else:
+            print("that wasn't palindrome!")
+if __name__ == "__main__":
+    palindromes("Hello")
