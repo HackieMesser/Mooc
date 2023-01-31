@@ -78,3 +78,15 @@ string=input("Please type in a string: ")
 for x in string:
     print(x)
     print("*")
+
+
+#negative to positive
+n=int(input("Please type in a positive integer: "))
+for x in range(-n, n+1):
+    if x != 0:
+        print(x)
+#i think u wanna use "i" for the for loop
+n=int(input("Please type in a positive integer: "))
+for i in range(-n, n+1):
+    if i != 0:
+        print(i)
