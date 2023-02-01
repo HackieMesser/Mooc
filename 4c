@@ -197,3 +197,17 @@ def shortest(my_list):
         else:
             continue
     return c
+#all the longest in list
+def all_the_longest(a):
+    c=""
+    for i in a:
+        if len(c)<len(i):
+            c=i
+    a.remove(c)
+
+    c=[c]
+    for i in a:
+        if len((c)[0])==len(i) and c!=i:
+            c.append(i)
+
+    return c
