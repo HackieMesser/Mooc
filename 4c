@@ -178,3 +178,12 @@ def distinct_numbers(a):
 if __name__ == "__main__":
     a = [1, 2, 3, 4, 5]
     distinct_numbers(a)
+#length of longest
+def length_of_longest(my_list):
+    c=""
+    for i in my_list:
+        if len(c)<len(i):
+            c=i
+        else:
+            continue
+    return len(c)
