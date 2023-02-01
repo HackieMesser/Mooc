@@ -187,3 +187,13 @@ def length_of_longest(my_list):
         else:
             continue
     return len(c)
+
+#shortest in list
+def shortest(my_list):
+    c=""
+    for i in my_list:
+        if c=="" or len(c)>len(i):
+            c=i
+        else:
+            continue
+    return c
