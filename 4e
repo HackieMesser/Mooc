@@ -1,0 +1,14 @@
+#everything reveresed
+
+def everything_reversed(a):
+    c=[]
+    
+    if len(a)>1:
+        for i in a[::-1]:
+
+            c.append(i[::-1])
+
+
+    return c
+
+
