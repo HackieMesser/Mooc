@@ -13,12 +13,8 @@ def everything_reversed(a):
 
 #most_common_character
 def most_common_character (a: str):
-    new=""
-    number=0
-    new_number=0
+    new=a[0]
     for i in a:
-        number=a.count(i)
-        if new_number<number:
-            new_number=number
+        if a.count(new)<a.count(i):
             new=i 
     return new
