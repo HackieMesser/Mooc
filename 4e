@@ -18,3 +18,16 @@ def most_common_character (a: str):
         if a.count(new)<a.count(i):
             new=i 
     return new
+#no_vowels
+
+def no_vowels(my_string: str):
+    vowels = "aeiou"
+    new=""
+    for i1 in my_string:
+        if i1 not in vowels:
+            new+=i1
+
+    return new
+
+if __name__ == "__main__":
+    my_string="abc"
