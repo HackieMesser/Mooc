@@ -31,3 +31,11 @@ def no_vowels(my_string: str):
 
 if __name__ == "__main__":
     my_string="abc"
+
+#no shouting
+def no_shouting(my_list:list):
+    new=[]
+    for word in my_list:
+        if word.isupper() ==False:
+            new.append(word)
+    return new
