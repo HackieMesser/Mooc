@@ -39,3 +39,30 @@ def no_shouting(my_list:list):
         if word.isupper() ==False:
             new.append(word)
     return new
+
+#longest_series_of_neighbours
+def longest_series_of_neighbours(my_list):
+    i2=0
+    start=True
+    new=[]
+    chain=0
+    gap=0
+    index=0
+    chain_record=0
+    for i in my_list:
+        if start ==True:
+            new.append(i)
+            start=False
+            if chain_record<len(new):
+                chain_record = len(new)
+
+        elif i==(new[-1])+1 or i==(new[-1])-1:
+            new.append(i)
+            if chain_record<len(new):
+                chain_record = len(new)
+        else:
+            if chain_record<len(new):
+                chain_record = len(new)
+            new=[]
+            new.append(i)
+    return chain_record
