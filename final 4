@@ -1,4 +1,4 @@
-def start():
+def main():
     exam_list=[]
     exercises_list=[]
     while True:
@@ -13,10 +13,11 @@ def start():
     
 def variable_break_exam (a):
     split=[]
-    exam_points=[]
+    exam_points="x"
     if a != "":
         split=a.split()
-        exam_points.append(split[0])
+        exam_points=int(split[0])
+        #exam_points.append(split[0])
         #exam_points = [int(x) for x in exam_points]
 
     return exam_points
@@ -26,7 +27,8 @@ def variable_break_exercises (a):
     exercises_completed=[]
     if a != "":
         split=a.split()
-        exercises_completed.append(split[1])
+        exercises_completed = int(split[1])
+        #exercises_completed.append(split[1])
         #exercises_completed = [int(x) for x in exercises_completed ]
 
     return exercises_completed
@@ -34,7 +36,7 @@ def variable_break_exercises (a):
 def stats_print(exam_list, exercises_list):
     total_points_list=[]
     index=0
-    print(exercises_list)
+    #print(exercises_list)
     for x in exercises_list:
         #x=str(x)
         #x=int(x)
@@ -43,44 +45,55 @@ def stats_print(exam_list, exercises_list):
         else:
              x =0
         total_points_list.append(x+(exam_list[index]))
+        
         index+=1
-    print(points_average(total_points_list))
-    print(pass_percentage(total_points_list))
-    print(grade_distribution(total_points_list))
+    print("Statistics:")
+    print(f"Points average: {(points_average(total_points_list))}")
+    print(f"Pass percentage: {(pass_percentage(exam_list, total_points_list)):.1f}")
+    print("Grade distribution:")
+    grade_distribution(exam_list, total_points_list)
 
 def points_average(total_points_list):
     sum=0.0
     for x in total_points_list:
         sum+=x
     return sum/len(total_points_list)
-def pass_percentage(total_points_list):
+def pass_percentage(exam_list, total_points_list):
     pass_sum =0.0
+    index=0
     for x in total_points_list:
-        if x > 14:
+        if x > 14 and exam_list[index]>9:
             pass_sum+=1 
         else:
+            index+=1
             continue
+
+        index+=1
+    
     return (pass_sum / len(total_points_list)*100)
-def grade_distribution(total_points_list):
+    
+def grade_distribution(exam_list,total_points_list):
     grade_5_sum =0
     grade_4_sum =0
     grade_3_sum =0
     grade_2_sum =0
     grade_1_sum =0
     grade_0_sum =0
+    index=0
     for x in total_points_list:
-        if total_points_list < 14:
+        if x < 14 or exam_list[index]<10:
             grade_0_sum+=1
-        elif total_points_list >14<18:
+        elif x >14 and x<18:
             grade_1_sum+=1
-        elif total_points_list >17<20:
+        elif x >17 and x<21:
             grade_2_sum+=1
-        elif total_points_list >20<24:
+        elif x >20 and x<24:
             grade_3_sum+=1
-        elif total_points_list > 23<28:
+        elif x > 23 and x<28:
             grade_4_sum +=1
-        else:
+        elif x > 27:
             grade_5_sum +=1
+        index+=1
     print("5:",(grade_5_sum*"*"))
     print("4:",(grade_4_sum*"*"))
     print("3:",(grade_3_sum*"*"))
@@ -88,5 +101,4 @@ def grade_distribution(total_points_list):
     print("1:",(grade_1_sum*"*"))
     print("0:",(grade_0_sum*"*"))
 
-if __name__ == "__main__":
-    start()
+main()
