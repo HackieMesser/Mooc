@@ -1,0 +1,92 @@
+def start():
+    exam_list=[]
+    exercises_list=[]
+    while True:
+        a=input("Exam points and exercises completed: ")
+        if a != "":
+            exam_list.append(variable_break_exam(a))
+            exercises_list.append(variable_break_exercises(a))
+        else:
+            stats_print(exam_list, exercises_list)
+            break
+
+    
+def variable_break_exam (a):
+    split=[]
+    exam_points=[]
+    if a != "":
+        split=a.split()
+        exam_points.append(split[0])
+        #exam_points = [int(x) for x in exam_points]
+
+    return exam_points
+
+def variable_break_exercises (a):
+    split=[]
+    exercises_completed=[]
+    if a != "":
+        split=a.split()
+        exercises_completed.append(split[1])
+        #exercises_completed = [int(x) for x in exercises_completed ]
+
+    return exercises_completed
+
+def stats_print(exam_list, exercises_list):
+    total_points_list=[]
+    index=0
+    print(exercises_list)
+    for x in exercises_list:
+        #x=str(x)
+        #x=int(x)
+        if x>=10:
+            x=x//10
+        else:
+             x =0
+        total_points_list.append(x+(exam_list[index]))
+        index+=1
+    print(points_average(total_points_list))
+    print(pass_percentage(total_points_list))
+    print(grade_distribution(total_points_list))
+
+def points_average(total_points_list):
+    sum=0.0
+    for x in total_points_list:
+        sum+=x
+    return sum/len(total_points_list)
+def pass_percentage(total_points_list):
+    pass_sum =0.0
+    for x in total_points_list:
+        if x > 14:
+            pass_sum+=1 
+        else:
+            continue
+    return (pass_sum / len(total_points_list)*100)
+def grade_distribution(total_points_list):
+    grade_5_sum =0
+    grade_4_sum =0
+    grade_3_sum =0
+    grade_2_sum =0
+    grade_1_sum =0
+    grade_0_sum =0
+    for x in total_points_list:
+        if total_points_list < 14:
+            grade_0_sum+=1
+        elif total_points_list >14<18:
+            grade_1_sum+=1
+        elif total_points_list >17<20:
+            grade_2_sum+=1
+        elif total_points_list >20<24:
+            grade_3_sum+=1
+        elif total_points_list > 23<28:
+            grade_4_sum +=1
+        else:
+            grade_5_sum +=1
+    print("5:",(grade_5_sum*"*"))
+    print("4:",(grade_4_sum*"*"))
+    print("3:",(grade_3_sum*"*"))
+    print("2:",(grade_2_sum*"*"))
+    print("1:",(grade_1_sum*"*"))
+    print("0:",(grade_0_sum*"*"))
+
+if __name__ == "__main__":
+    start()
