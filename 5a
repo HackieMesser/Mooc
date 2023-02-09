@@ -1,1 +1,4 @@
-
+def longest(strings: list):
+    string02 = strings[:]
+    string02.sort(key=len)
+    return (string02[-1])
