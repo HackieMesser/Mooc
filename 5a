@@ -3,3 +3,13 @@ def longest(strings: list):
     string02 = strings[:]
     string02.sort(key=len)
     return (string02[-1])
+    
+#02
+def count_matching_elements(my_matrix: list, element: int):
+    count=0
+    for i in my_matrix:
+        for x in i:
+            if x == element:
+                count+=1
+    return count
+
