@@ -43,3 +43,12 @@ def row_correct(sudoku: list, row_no:int):
             return False
         i2=i
     return True
+#04 anotherway    
+def row_correct(sudoku: list, row_no:int):
+    numbers=[]
+    for i in sudoku[row_no]:
+        if i!=0 and i in numbers:
+            return False
+        numbers.append(i)
+    return True
+            
