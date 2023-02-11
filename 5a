@@ -59,4 +59,25 @@ def column_correct(sudoku: list, column_no:int):
             return False
         numbers.append(sudoku[i][column_no])
     return True
+#06 work in progress
+def block_correct(sudoku:list, row_no:int, column_no:int):
+    numbers=[]
+    for i in range(0,2):
+        if sudoku[row_no][column_no+i] !=0 and sudoku[row_no][column_no+i] in numbers:
+            return False
+        numbers.append(sudoku[row_no][column_no+i])
+    row_no+=1
+    for i in range(0,2):
+        if sudoku[row_no][column_no+i] !=0 and sudoku[row_no][column_no+i] in numbers:
+            return False
+        numbers.append(sudoku[row_no][column_no+i])
+    row_no+=1
+    for i in range(0,2):
+        if sudoku[row_no][column_no+i] !=0 and sudoku[row_no][column_no+i] in numbers:
+            return False
+        numbers.append(sudoku[row_no][column_no+i])
+    return True
+
+    
+
 
