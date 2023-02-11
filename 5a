@@ -32,3 +32,14 @@ def who_won(game_board: list):
         return 1
     else:
         return 0
+#04
+def row_correct(sudoku: list, row_no:int):
+    columns=sudoku[row_no]
+    columns.sort()
+    print(columns)
+    i2=0
+    for i in columns:
+        if i2!=0 and i2 ==i:
+            return False
+        i2=i
+    return True
