@@ -99,6 +99,50 @@ def block_correct(sudoku:list, row_no:int, column_no:int):
     return True
 
 
+#08? not done
+#done
+def row_correct(sudoku: list):
+    numbersrc=[]
+    for i1a in range(0,10):
+        for ia in sudoku[i1a]:
+            if ia!=0 and ia in numbersrc:
+                return False
+            numbersrc.append(ia)
+        return True
+                
+   
+
+#done
+def column_correct(sudoku: list):
+    numberscc=[]
+    for i1b in range (0,10):
+        for ib in range(0,10):
+            if (sudoku[ib][i1b])!=0 and (sudoku[ib][i1b]) in numberscc:
+                return False
+            numberscc.append(sudoku[ib][i1b])
+        return True
+
+def block_correct(sudoku:list):
+    numbersbc=[]
+    matrices=[0,3,6]
+
+    for i3 in matrices:
+        row_no=i3
+        for i2 in matrices:
+            column_no=i2
+            for i in range(0,3):    
+                for i1 in range(0,3):
+                    numberbc = sudoku[row_no+i][column_no+i1]
+                    if numberbc !=0 and numberbc in numbersbc:
+                        return False
+                    numbersbc.append(sudoku[row_no+i][column_no+i1])
+            return True    
+            
+def sudoku_grid_correct(sudoku: list):
+    if row_correct(sudoku) and column_correct(sudoku) and block_correct(sudoku) ==True:
+        return True
+    else:
+        return False
 
 
 
