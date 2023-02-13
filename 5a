@@ -145,6 +145,54 @@ def sudoku_grid_correct(sudoku: list):
         return False
 
 
+#done
+def row_correct(sudoku: list):
+    numbersrc=[]
+    for i1a in range(0,9):
+        for ia in sudoku[i1a]:
+            if ia!=0 and ia in numbersrc:
+                return False
+            numbersrc.append(ia)
+        numbersrc.clear()
+    return True
+                
+   
+
+#done
+def column_correct(sudoku: list):
+    numberscc=[]
+    for i1b in range (0,9):
+        for ib in range(0,9):
+            if (sudoku[ib][i1b])!=0 and (sudoku[ib][i1b]) in numberscc:
+                return False
+            numberscc.append(sudoku[ib][i1b])
+        numberscc.clear()
+    return True
+
+def block_correct(sudoku:list):
+    numbersbc=[]
+    matrices=[0,3,6]
+
+    for i3 in matrices:
+        row_no=i3
+        for i2 in matrices:
+            column_no=i2
+            for i in range(0,3):    
+                for i1 in range(0,3):
+                    numberbc = sudoku[row_no+i][column_no+i1]
+                    if sudoku[row_no+i][column_no+i1] !=0 and sudoku[row_no+i][column_no+i1] in numbersbc:
+                        return False
+                    numbersbc.append(numberbc)
+            numbersbc.clear()
+    return True    
+            
+def sudoku_grid_correct(sudoku: list):
+    if row_correct(sudoku) and column_correct(sudoku) and block_correct(sudoku):
+        return True
+    else:
+        return False
+
+
 
 
 
