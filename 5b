@@ -16,6 +16,11 @@ def remove_smallest(numbers:list):
     new=numbers[:]
     new.sort()
     numbers.remove((new.pop(0)))
+#ms
+def remove_smallest(numbers:list):
+    minnum=min(numbers)
+    numbers.remove(new)
+
 
 
 
