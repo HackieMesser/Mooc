@@ -11,5 +11,11 @@ def double_items(numbers:list):
     for i in (range (len(new_nums))):
         new_nums[i]*=2
     return new_nums
+#remove smallest
+def remove_smallest(numbers:list):
+    new=numbers[:]
+    new.sort()
+    numbers.remove((new.pop(0)))
+
 
 
