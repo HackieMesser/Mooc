@@ -5,4 +5,11 @@ def double_items(numbers:list):
         i*=2
         new_nums.append(i)
     return new_nums
+#ms
+def double_items(numbers:list):
+    new_nums=numbers[:]
+    for i in (range (len(new_nums))):
+        new_nums[i]*=2
+    return new_nums
+
 
