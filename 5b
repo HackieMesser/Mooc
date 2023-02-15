@@ -21,35 +21,39 @@ def remove_smallest(numbers:list):
     minnum=min(numbers)
     numbers.remove(new)
 
-#wip
+#sudoku print and add
 def print_sudoku(sudoku:list):
     row=0
     column=0
-    for i in sudoku[row]:
-        for i2 in sudoku[row][column]:
-            sudoku[row][column] = '_'
-            
+    for i in range(0,9):
+        column=0
+        for i2 in range(0,9):
+            if sudoku[row][column]==0 or sudoku[row][column]=='_':  
+                sudoku[row][column] = '_'
             column+=1
         row+=1
-    for i in sudoku[row]:
-        for i2 in sudoku[row][column]: 
-            print(sudoku[row][column], end="")
+    row=0
+    for i in range(0,9):
+        column=0
+        for i2 in range(0,9):
+            if i2 != 8 and i2 != 2 and i2 !=5: 
+                print(sudoku[row][column], end=" ")
+            elif i2 != 8 and i2 == 2 or i2 ==5:
+                print(sudoku[row][column], end="  ")
+            elif i2 ==8: 
+                print(sudoku[row][column])
             column+=1
+        if i==2 or i ==5:
+                print()  
         row+=1
 
-if __name__ =='__main__':
-    sudoku  = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0]
-]
-    print_sudoku(sudoku)
+def add_number(sudoku,a,b,c):
+    sudoku[a][b] = c
+    print(sudoku)
+
+
+
+
 
 
 
