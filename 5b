@@ -21,6 +21,35 @@ def remove_smallest(numbers:list):
     minnum=min(numbers)
     numbers.remove(new)
 
+#wip
+def print_sudoku(sudoku:list):
+    row=0
+    column=0
+    for i in sudoku[row]:
+        for i2 in sudoku[row][column]:
+            sudoku[row][column] = '_'
+            
+            column+=1
+        row+=1
+    for i in sudoku[row]:
+        for i2 in sudoku[row][column]: 
+            print(sudoku[row][column], end="")
+            column+=1
+        row+=1
+
+if __name__ =='__main__':
+    sudoku  = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0]
+]
+    print_sudoku(sudoku)
 
 
 
