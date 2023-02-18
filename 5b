@@ -88,5 +88,21 @@ if __name__ == '__main__':
     game_board = [["", "", ""], ["", "", ""], ["", "", ""]]
     print(play_turn(game_board, 2, 0, "X"))
     print(game_board)
+#transpose
+def transpose(matrix):
+    mat=matrix[:]
+    index=0
+    for x in matrix:
+        mat[index]=x[:]
+        index+=1
+    for row in range(0,len(matrix)):
+        for column in range(0,len(matrix)):
+            mat[column][row]=matrix[row][column]
+    index=0
+    for x in mat:
+        matrix[index]=x[:]
+        index+=1
+    
+
 
 
