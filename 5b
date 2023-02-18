@@ -72,7 +72,21 @@ def print_sudoku(sudoku: list):
 def add_number(sudoku: list, row_no: int, column_no: int, number: int):
     sudoku[row_no][column_no] = number
 
-
-
+#need to go back to sudoku copy and orignal thing
+#tictactoe
+def play_turn(game_board, x, y, piece):
+    valid = [0,1,2]
+    if x in valid and y in valid:
+        if game_board[y][x] == "":
+            game_board[y][x] = piece
+            return True
+        else:
+            return False
+    else:
+        return False
+if __name__ == '__main__':
+    game_board = [["", "", ""], ["", "", ""], ["", "", ""]]
+    print(play_turn(game_board, 2, 0, "X"))
+    print(game_board)
 
 
