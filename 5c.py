@@ -46,3 +46,32 @@ while True:
     elif cmd=="3":
         print("quitting...")
         break 
+#phonebook2
+        def main():
+    pbook={}
+    while True:
+        cmd=input("command (1 search, 2 add, 3 quit): ")
+        if cmd=="1":
+            cmdfunc("1", pbook)
+        elif cmd=="2":
+            cmdfunc("2", pbook)
+        else:
+            break
+    print("quitting...")
+def cmdfunc(num, pbook):
+    if num =="1":
+        search=input("name: ")
+        if search in pbook:
+            for word in pbook[search]:
+                print(word)
+        else:
+            print("no number")
+    if num =="2":
+        name=input("name: ")
+        number = input("number: ")
+        if name in pbook:
+            pbook[name].append(number)
+        else:
+            pbook[name]=[number]
+        print("ok!")
+main()
