@@ -27,3 +27,22 @@ def histogram(string:str):
 if __name__ == "__main__":
     string = "abba"
     histogram(string)
+
+#phone book    
+pbook={}
+while True:
+    cmd=input("command(1 search, 2 add, 3 quit)")
+    if cmd =="1":
+        search=input("name:")
+        if search in pbook:
+            print(pbook[search])
+        else:
+            print("no number")
+    elif cmd =="2":
+        name=input("name:")
+        number=input("number:")
+        pbook[name]=number
+        print("ok!")
+    elif cmd=="3":
+        print("quitting...")
+        break 
