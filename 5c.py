@@ -75,3 +75,11 @@ def cmdfunc(num, pbook):
             pbook[name]=[number]
         print("ok!")
 main()
+#invert dictionary
+def invert(dictionary:dict):
+    new_dictionary ={}
+    for key, value in dictionary.items():
+        new_dictionary[value]=key
+    dictionary.clear()
+    for key,value in new_dictionary.items():
+        dictionary[key]=value
