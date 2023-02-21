@@ -83,3 +83,73 @@ def invert(dictionary:dict):
     dictionary.clear()
     for key,value in new_dictionary.items():
         dictionary[key]=value
+#dic of numbers
+def dict_of_numbers():
+    numbers={}
+    numbers[0]="zero"
+    numbers[1]="one"
+    numbers[11]="eleven"
+    numbers[12]="twelve"
+    numbers[13]="thirteen"
+    numbers[14]="fourteen"
+    numbers[15]="fifteen"
+    numbers[18]="eighteen"
+    listy=[16,17,19]
+
+    i=0
+    for tens in range(0,10):
+        if tens == 0:
+            tplace=""
+        elif tens == 1:
+            tplace="ten"
+        elif tens == 2:
+            tplace="twenty"
+        elif tens == 3:
+            tplace="thirty"
+        elif tens == 4:
+            tplace="forty"
+        elif tens == 5:
+            tplace="fifty"
+        elif tens == 6:
+            tplace="sixty"
+        elif tens == 7:
+            tplace="seventy"
+        elif tens == 8:
+            tplace="eighty"
+        elif tens == 9:
+            tplace="ninety"
+        for ones in range(0,10):
+            if ones == 0:
+                oplace=""
+            elif ones == 1:
+                oplace="one"
+            elif ones == 2:
+                oplace="two"
+            elif ones == 3:
+                oplace="three"
+            elif ones == 4:
+                oplace="four"
+            elif ones == 5:
+                oplace="five"
+            elif ones == 6:
+                oplace="six"
+            elif ones == 7:
+                oplace="seven"
+            elif ones == 8:
+                oplace="eight"
+            elif ones == 9:
+                oplace="nine"
+            if i not in numbers and i not in listy: 
+                if ones>0 and tens>1:
+                    numbers[i]=(f"{tplace}-{oplace}")
+                else:
+                    numbers[i]=(f"{tplace}{oplace}")
+            elif i in listy:
+                numbers[i]=(f"{oplace}teen")
+            i+=1
+    return numbers
+if __name__== "__main__":
+    numbers=dict_of_numbers()
+    print(numbers[11])
+    print(numbers[19])
+    print(numbers[33])
