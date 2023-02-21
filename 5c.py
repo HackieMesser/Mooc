@@ -153,3 +153,15 @@ if __name__== "__main__":
     print(numbers[11])
     print(numbers[19])
     print(numbers[33])
+
+    
+#movies
+def add_movie(database, name, director, year, runtime):
+    movie=({"name":name, "director":director, "year":year, "runtime":runtime})
+    database.append(movie)
+
+if __name__ == '__main__':
+    database = []
+    add_movie(database, "Gone with the Python", "Victor Pything", 2017, 116)
+    add_movie(database, "Pythons on a Plane", "Renny Pytholin", 2001, 94)
+    print(database)
