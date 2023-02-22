@@ -165,3 +165,23 @@ if __name__ == '__main__':
     add_movie(database, "Gone with the Python", "Victor Pything", 2017, 116)
     add_movie(database, "Pythons on a Plane", "Renny Pytholin", 2001, 94)
     print(database)
+
+    
+def find_movies(database, search_term):
+    movies=[]
+    for items in database:
+        for dics in items:
+            if search_term.lower() in dics["name"].lower():
+                movies.append(dics)
+    return movies
+
+if __name__ == "__main__":
+    database = [{"name": "Gone with the Python", "director": "Victor Pything", "year": 2017, "runtime": 116},
+    {"name": "Pythons on a Plane", "director": "Renny Pytholin", "year": 2001, "runtime": 94},
+    {"name": "Dawn of the Dead Programmers", "director": "M. Night Python", "year": 2011, "runtime": 101}]
+
+    my_movies = find_movies(database, "python")
+    print(my_movies)
+
+
+            
