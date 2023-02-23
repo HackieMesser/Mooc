@@ -166,13 +166,13 @@ if __name__ == '__main__':
     add_movie(database, "Pythons on a Plane", "Renny Pytholin", 2001, 94)
     print(database)
 
-    
+#search movies    
 def find_movies(database, search_term):
     movies=[]
     for items in database:
-        for dics in items:
-            if search_term.lower() in dics["name"].lower():
-                movies.append(dics)
+        x= items["name"]
+        if search_term.lower() in x.lower():
+            movies.append(items)
     return movies
 
 if __name__ == "__main__":
@@ -182,6 +182,9 @@ if __name__ == "__main__":
 
     my_movies = find_movies(database, "python")
     print(my_movies)
+
+
+            
 
 
             
