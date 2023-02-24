@@ -30,3 +30,25 @@ def older_people(people, year):
         if i[1]<year:
             older.append(i[0])
     return older
+
+#04 pt1
+def add_student(students, name):
+    students[name]=0
+    return students
+
+def print_student(students, name):
+    for items in students:
+        if name in items:
+            print(f"{name}:")
+            print(" no completed courses")
+            break
+    else:
+        print(f"{name}: no such person in the database")
+
+if __name__ == '__main__':
+    students = {}
+    add_student(students, "Peter")
+    add_student(students, "Emily")
+    print_student(students, "Peter")
+    print_student(students, "Emily")
+    print_student(students, "Andy")
