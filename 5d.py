@@ -23,3 +23,10 @@ def oldest_person(people):
     for c in people:
         if c[1]==b:
             return c[0]
+#03
+def older_people(people, year):
+    older=[]
+    for i in people:
+        if i[1]<year:
+            older.append(i[0])
+    return older
