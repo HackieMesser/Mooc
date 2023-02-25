@@ -57,8 +57,14 @@ def print_student(students, name):
         if students[name]!=[]:
             num_courses=len(students[name])
             for x in students[name]:
+                index=0
                 for i in x:
-                    print(f"{i}")
+                    if index==0:
+                        c_name=i
+                    else:
+                        grade=i
+                    index+=1
+                print(c_name+" "+str(grade))
             
                 
 if __name__ == '__main__':
