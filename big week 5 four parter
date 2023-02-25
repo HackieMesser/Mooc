@@ -30,3 +30,14 @@ if __name__ == '__main__':
     print_student(students, "Peter")
     print_student(students, "Emily")
     print_student(students, "Andy")
+
+
+def add_student(students, name):
+    students[name]=[]
+    return students
+
+
+if __name__ == '__main__':
+    students = {}
+    add_student(students, "Peter")
+    add_student(students, "Emily")
