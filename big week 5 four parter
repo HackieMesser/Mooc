@@ -29,49 +29,7 @@ def print_student(students, name):
         print(f"{name}: no such person in the database")
 
     
-if __name__ == '__main__':
-    students = {}
-    add_student(students, "Peter")
-    add_student(students, "Emily")
-    print_student(students, "Peter")
-    print_student(students, "Emily")
-    print_student(students, "Andy")
 
-
-def add_student(students, name):
-    students[name]=[]
-    return students
-
-
-if __name__ == '__main__':
-    students = {}
-    add_student(students, "Peter")
-    add_student(students, "Emily")
-
-
-
-
-
-def add_student(students, name):
-    students[name]=[]
-    return students
-def add_course(students, name, course):
-    students[name].append(course)
-def print_student(students, name):
-    no_courses="no completed courses"
-    if name in students:
-        if students[name]!=[]:
-            num_courses=len(students[name])
-            for x in students[name]:
-                index=0
-                for i in x:
-                    if index==0:
-                        c_name=i
-                    else:
-                        grade=i
-                    index+=1
-                print(c_name+" "+str(grade))
-            
                 
 if __name__ == '__main__':
     students = {}
