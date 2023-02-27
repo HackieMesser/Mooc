@@ -48,22 +48,22 @@ def add_student(students, name):
 
 
 def add_course(students, name, course):
-    def add_course(students, name, course):
     if len(students[name])==0:
         students[name].append(course)
         return students
-    
-    if len(students[name])==0:
+        
+    else:
+        for i in students[name]:
+            print(i)
+            if course[0] == i[0] and course[1]>i[1]:
+                students[name].pop(i)
+                students[name].append(course)
+                return students
+            elif course[1]==0:
+                return students
+   
         students[name].append(course)
-    for i in students[name]:
-        if course[0] == i[0] and course[1]>i[1]:
-            students[name].pop(i)
-            students[name].append(course)
-            break
-        elif course[1]==0:
-            break
-        else: 
-            students[name].append(course)
+            
 
 
 
