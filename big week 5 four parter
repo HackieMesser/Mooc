@@ -48,6 +48,11 @@ def add_student(students, name):
 
 
 def add_course(students, name, course):
+    def add_course(students, name, course):
+    if len(students[name])==0:
+        students[name].append(course)
+        return students
+    
     if len(students[name])==0:
         students[name].append(course)
     for i in students[name]:
