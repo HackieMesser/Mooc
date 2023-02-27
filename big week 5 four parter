@@ -41,6 +41,7 @@ if __name__ == '__main__':
 
 
 #still broken
+#grade must be able to be raised- lAST TEEST for 3
 def add_student(students, name):
     students[name]=[]
     return students
@@ -49,16 +50,22 @@ def add_student(students, name):
 
 def add_course(students, name, course):
     if len(students[name])==0:
-        students[name].append(course)
-        return students
+        if course[1]==0:
+            return students
+        else:
+            students[name].append(course)
+            return students
         
     else:
         for i in students[name]:
-            print(i)
-            if course[0] == i[0] and course[1]>i[1]:
-                students[name].pop(i)
-                students[name].append(course)
-                return students
+            if course[0] == i[0]: 
+                if course[1]>i[1]:
+                    students[name].pop(i)
+                    students[name].append(course)
+                    return students
+                elif course[1]<i[1]:
+                    return students
+ 
             elif course[1]==0:
                 return students
    
