@@ -55,40 +55,37 @@ def print_student(students, name):
 
 
 def summary(students):
-    print(len(students))
     index=0
     topgpa=0
+    indexy=0
     for i in students:
         
-        print(len(students[i]))
         if index==0:
-            print(students[i])
-            print(len(students[i]))
-            greatest=students[i]
+
+            greatest=i
             glen=len(students[i])
         elif index !=0:
-            if glen<len(i):
-                greatest=students[i]
+            if glen<len(students[i]):
+                greatest=i
                 glen=len(students[i])
-
+        
         for x in students[i]:
-            cumgpa=0
-            print(x)
-            print(x[1])
+            
+            cum_gpa=0
+
             cum_gpa+=x[1]
-            if index==0:
+            if indexy==0:
                 topgpa=cum_gpa/len(students[i])
-                topstud=students[i]
+                topstud=i
             elif cum_gpa/len(i) > topgpa:
                 topgpa=cum_gpa/len(students[i])
-                topstud=students[i]
-    
+                topstud=i
+            indexy+=1
         index+=1
 
     print(f"students {len(students)}")
     print(f"most courses completed {glen} {greatest}")
     print(F"best average grade {topgpa} {topstud}")
-    
     
     
     
