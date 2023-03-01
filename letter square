@@ -2,16 +2,21 @@ def letter_square(layers:int):
     length=(layers*2)-1
     matrix=[]
     letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    matrix*=length
     print(matrix)
     index=0
     starting_letter=layers-1
     for i in range(0,length):
-        if index==0:
-            matrix.append(letters[starting_letter])
+        matrix.append([])
+        for x in range(0,length):
+            if index==0:
+                matrix[i].append(letters[starting_letter])
+        
+
+            
+
     print(matrix)
         
 
 if __name__ == "__main__":
     layers =3
-   
+    letter_square(layers)
