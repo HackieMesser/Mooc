@@ -1,5 +1,3 @@
-#current does the matrix but with one letter
-
 def letter_square(layers:int):
     length=(layers*2)-1
     matrix=[]
@@ -10,8 +8,8 @@ def letter_square(layers:int):
     for i in range(0,length):
         matrix.append([])
         for x in range(0,length):
-            if index==0:
-                matrix[i].append(letters[starting_letter])
+            matrix[i].append(letters[starting_letter-index])
+        index+=1
         
 
             
