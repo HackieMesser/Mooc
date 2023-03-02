@@ -1,5 +1,6 @@
 def letter_square(layers:int):
     length=(layers*2)-1
+    flip=length//2
     matrix=[]
     letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     print(matrix)
@@ -10,7 +11,7 @@ def letter_square(layers:int):
         for x in range(0,length):
             matrix[i].append(letters[starting_letter])
         for let in range(index,length-index):
-            matrix[i][let].replace(letters[starting_letter],letters[starting_letter-index])
+            matrix[i][let].replace("C","22")
         index+=1
         
 
