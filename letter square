@@ -8,7 +8,9 @@ def letter_square(layers:int):
     for i in range(0,length):
         matrix.append([])
         for x in range(0,length):
-            matrix[i].append(letters[starting_letter-index])
+            matrix[i].append(letters[starting_letter])
+        for let in range(index,length-index):
+            matrix[i][let].replace(letters[starting_letter],letters[starting_letter-index])
         index+=1
         
 
