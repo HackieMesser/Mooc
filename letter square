@@ -169,8 +169,6 @@ def letter_square(layers:int):
     flip=length//2
     matrix=[]
     letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    index=0
-    subindex=0
     starting_letter=layers-1
     for i in range(0,length):
         matrix.append([])
@@ -189,7 +187,18 @@ def letter_square(layers:int):
             i+=1
         miniindex+=1
         aindex+=1
+    matrix[flip][flip]=matrix[flip][flip].replace("B","A")
+            
 
+    for r in matrix:
+        string=""
+        for c in r:
+            string+=c
+        print(string)
+
+
+
+        
             
 
     print(matrix)
