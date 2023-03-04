@@ -201,7 +201,7 @@ def letter_square(layers:int):
         
             
 
-    print(matrix)
+
 if __name__ == "__main__":
     layers =3
     letter_square(layers)
