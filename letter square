@@ -132,3 +132,35 @@ if __name__ == "__main__":
     layers =3
     letter_square(layers)
         
+
+
+def letter_square(layers:int):
+    length=(layers*2)-1
+    flip=length//2
+    matrix=[]
+    letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    print(matrix)
+    index=0
+    subindex=0
+    starting_letter=layers-1
+    for i in range(0,length):
+        matrix.append([])
+        for x in range(0,length):
+            matrix[i].append(letters[starting_letter])
+    startindex=0
+    i=1
+    for b in range(1+startindex, length -i):
+        for x in range(1+startindex,length-i):
+            matrix[b][x]=matrix[b][x].replace(letters[starting_letter-startindex],letters[starting_letter-i])
+        startindex+=1
+        i+=1
+        index+=1
+        
+
+            
+
+    print(matrix)
+if __name__ == "__main__":
+    layers =3
+    letter_square(layers)
+        
