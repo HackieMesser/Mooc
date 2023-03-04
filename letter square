@@ -22,7 +22,6 @@ def letter_square(layers:int):
         i+=1    
         miniindex+=1
         aindex+=1
-    matrix[flip][flip]=matrix[flip][flip].replace("B","A")
             
 
     for r in matrix:
@@ -36,7 +35,3 @@ letter_square(layers)
         
             
 
-
-if __name__ == "__main__":
-    layers =3
-    letter_square(layers)
