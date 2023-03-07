@@ -12,3 +12,8 @@ def largest():
         return int(larg) 
 
 
+#wip
+def read_fruits():
+    with open("fruits.csv") as file:
+        for line in file:
+            file.split(";")
