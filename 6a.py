@@ -16,4 +16,8 @@ def largest():
 def read_fruits():
     with open("fruits.csv") as file:
         for line in file:
-            file.split(";")
+            line=line.replace("\n","")
+            line=line.split(";")
+            name=line[0]
+            price=line[1:]
+            name["fruit"]=price
