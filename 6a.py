@@ -20,4 +20,5 @@ def read_fruits():
             line=line.split(";")
             name=line[0]
             price=line[1:]
-            name["fruit"]=price
+            dic={name:price}
+        return dic
