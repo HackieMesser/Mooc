@@ -25,8 +25,8 @@ def read_fruits():
             if index>1:
                 dic[name]=price
             else:
-                dic=name:price
+                dic={name:price}
             index+=1
 
         return dic
-read_fruits()
+
