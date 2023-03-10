@@ -19,6 +19,6 @@ def read_fruits():
             line=line.replace("\n","")
             line=line.split(";")
             name=line[0]
-            price=line[1]
+            price=int(line[1])
             dic={name:price}
         return dic
