@@ -15,6 +15,7 @@ def largest():
 #wip
 def read_fruits():
     with open("fruits.csv") as file:
+        index=0
         for line in file:
             line=line.replace("\n","")
             line=line.split(";")
@@ -25,6 +26,7 @@ def read_fruits():
                 dic[name]=price
             else:
                 dic=name:price
+            index+=1
 
         return dic
 read_fruits()
