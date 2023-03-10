@@ -15,12 +15,13 @@ def largest():
 #wip
 def read_fruits():
     with open("fruits.csv") as file:
+        dict(dic)
         for line in file:
             line=line.replace("\n","")
             line=line.split(";")
             name=line[0]
             price=line[1]
             price=float(price)
-            dic={name:price}
-            
+            dic[name]=price
+
         return dic
