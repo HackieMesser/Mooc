@@ -11,22 +11,19 @@ def largest():
             print(larg)
         return int(larg) 
 
-
-#wip
 def read_fruits():
     with open("fruits.csv") as file:
-        index=0
+        dic={}
         for line in file:
             line=line.replace("\n","")
             line=line.split(";")
             name=line[0]
             price=line[1]
             price=float(price)
-            if index>1:
-                dic[name]=price
-            else:
-                dic={name:price}
-            index+=1
+
+            dic[name]=price
+           
 
         return dic
+
 
