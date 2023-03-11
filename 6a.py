@@ -28,5 +28,17 @@ def read_fruits():
 
 
 def matrix_sum():
+    with open("matrix.txt") as text:
+        items=text.split(",")
+        sum=0
+        for item in items:
+            sum+=item
+    return sum
+
+matrix_sum()
+
+
+
 def matrix_max():
+def row_sums():def matrix_max():
 def row_sums():
