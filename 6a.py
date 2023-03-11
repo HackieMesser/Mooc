@@ -27,3 +27,6 @@ def read_fruits():
         return dic
 
 
+def matrix_sum():
+def matrix_max():
+def row_sums():
