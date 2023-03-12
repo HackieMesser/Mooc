@@ -36,9 +36,9 @@ def matrix_sum():
             print(items)
     return sum
 
-matrix_sum()
+#matrix_sum()
 
 
 
-#def matrix_max():
-#def row_sums():
+def matrix_max():
+def row_sums():
