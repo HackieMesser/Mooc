@@ -27,20 +27,4 @@ def read_fruits():
         return dic
 
 #WIP
-def matrix_sum():
-    with open("matrix.txt") as text:
-        sum=0
         text=text.split(",")
-
-        for item in text:
-            item=item.split(",")
-            item=int(item)
-            sum+=item
-    return sum
-
-matrix_sum()
-
-
-
-#def matrix_max():
-#def row_sums():
