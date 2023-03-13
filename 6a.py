@@ -32,8 +32,8 @@ def matrix_sum():
 
         for item in text:
             item=item.split(",")
-            item=int(item)
-            sum+=item
+        for items in item:
+            sum+=int(items)
     return sum
 
 matrix_sum()
