@@ -29,16 +29,16 @@ def read_fruits():
 #WIP
 def matrix_sum():
     with open("matrix.txt") as text:
-
+        sum=0
         for item in text:
-            items=item.split(",")
-
-            print(items)
+            item=item.split(",")
+            item=int(item)
+            sum+=item
     return sum
 
-#matrix_sum()
+matrix_sum()
 
 
 
-def matrix_max():
-def row_sums():
+#def matrix_max():
+#def row_sums():
