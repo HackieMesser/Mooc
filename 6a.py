@@ -42,3 +42,38 @@ matrix_sum()
 
 #def matrix_max():
 #def row_sums():
+
+
+#wip
+def matrix_sum():
+    with open("matrix.txt") as text:
+        sum=0
+
+        for item in text:
+            item=item.split(",")
+        for items in item:
+            sum+=int(items)
+            print(sum)
+    return sum
+
+#matrix_sum()
+
+
+
+def matrix_max():
+    with open("matrix.txt") as maxy:
+        largest="a"
+        index=0
+        for item in maxy:
+            if index==0:
+                largest = item
+            else:
+                if item > largest:
+                    largest=item
+            index+=1
+        print(index)    
+        print(largest)
+        return largest
+matrix_max()
+
+#def row_sums():
