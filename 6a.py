@@ -60,16 +60,34 @@ def matrix_sum():
 
 
 
+def matrix_sum():
+    with open("matrix.txt") as text:
+        sum=0
+
+        for item in text:
+            item=item.split(",")
+        for items in item:
+            sum+=int(items)
+            print(sum)
+    return sum
+
+#matrix_sum()
+
+
+
 def matrix_max():
     with open("matrix.txt") as maxy:
         largest="a"
         index=0
         for item in maxy:
+            item=item.split(",")
+            item=int(item)
+        for items in item:
             if index==0:
-                largest = item
+                largest = items
             else:
-                if item > largest:
-                    largest=item
+                if items > largest:
+                    largest=items
             index+=1
         print(index)    
         print(largest)
