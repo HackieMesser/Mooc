@@ -81,8 +81,8 @@ def matrix_max():
         index=0
         for item in maxy:
             item=item.split(",")
-            item=int(item)
         for items in item:
+            items=int(items)
             if index==0:
                 largest = items
             else:
