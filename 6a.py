@@ -95,3 +95,40 @@ def matrix_max():
 matrix_max()
 
 #def row_sums():
+def matrix_sum():
+    with open("matrix.txt") as text:
+        sum=0
+
+        for item in text:
+            item=item.split(",")
+        for items in item:
+            sum+=int(items)
+            print(sum)
+    return sum
+
+#matrix_sum()
+
+
+
+def matrix_max():
+    with open("matrix.txt") as maxy:
+        largest="a"
+        index=0
+        for item in maxy:
+            item=item.split(",")
+        for items in item:
+            items=int(items)
+            if index==0:
+                largest = items
+            else:
+                if items > largest:
+                    largest=items
+            index+=1
+        print(index)    
+        print(largest)
+        return largest
+#matrix_max()
+
+def row_sums():
+    with open("matrix.txt") as file:
+        
