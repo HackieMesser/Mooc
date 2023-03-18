@@ -171,4 +171,5 @@ def row_sums():
                 rowsum+=item
             listy.append(rowsum)
             print(listy)
+    return listy
 row_sums()
