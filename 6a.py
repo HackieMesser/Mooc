@@ -163,7 +163,7 @@ def row_sums():
         listy=[]
         for line in rsfile:
             line=line.replace("/n", "")
-            item=item.split(",")
+            line=line.split(",")
             rowsum=0
             for item in line:
                 #item=item.split(",")
