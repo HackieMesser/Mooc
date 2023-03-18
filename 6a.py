@@ -124,6 +124,21 @@ def matrix_sum():
 
 
 
+def matrix_sum():
+    with open("matrix.txt") as text:
+        sum=0
+
+        for item in text:
+            item=item.split(",")
+        for items in item:
+            sum+=int(items)
+            print(sum)
+    return sum
+
+#matrix_sum()
+
+
+
 def matrix_max():
     with open("matrix.txt") as maxy:
         largest="a"
@@ -145,10 +160,15 @@ def matrix_max():
 
 def row_sums():
     with open("matrix.txt") as rsfile:
+        listy=[]
         for line in rsfile:
             line=line.replace("/n", "")
+            item=item.split(",")
+            rowsum=0
             for item in line:
+                #item=item.split(",")
                 item=int(item)
                 rowsum+=item
-
+            listy.append(rowsum)
+            print(listy)
 row_sums()
