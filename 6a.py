@@ -44,7 +44,6 @@ matrix_sum()
 #def row_sums():
 
 
-#wip
 def matrix_sum():
     with open("matrix.txt") as text:
         sum=0
@@ -67,14 +66,14 @@ def matrix_max():
         index=0
         for item in maxy:
             item=item.split(",")
-        for items in item:
-            items=int(items)
-            if index==0:
-                largest = items
-            else:
-                if items > largest:
-                    largest=items
-            index+=1
+            for items in item:
+                items=int(items)
+                if index==0:
+                    largest = items
+                else:
+                    if items > largest:
+                        largest=items
+                index+=1
         return largest
 
 def row_sums():
@@ -90,3 +89,4 @@ def row_sums():
                 rowsum+=item
             listy.append(rowsum)
     return listy
+
