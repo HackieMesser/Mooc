@@ -226,24 +226,20 @@ def row_sums():
                 rowsum+=item
             listy.append(rowsum)
     return listy
-
-def matrix_sum():
-    with open("matrix.txt") as text:
-        sum=0
-
-        for item in text:
 def matrix_sum():
     with open("matrix.txt") as text:
         sum=0
 
         for item in text:
             item=item.split(",")
-        for items in item:
-            sum+=int(items)
-    print(sum)
+            for items in item:
+                items=items.replace("/n", "")
+                sum=int(items)
+        #for items in item:
+           # print(items)
+            #sum+=int(items)
     return sum
 
-matrix_sum()
 
 
 def matrix_max():
