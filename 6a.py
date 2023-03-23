@@ -232,6 +232,11 @@ def matrix_sum():
         sum=0
 
         for item in text:
+def matrix_sum():
+    with open("matrix.txt") as text:
+        sum=0
+
+        for item in text:
             item=item.split(",")
         for items in item:
             sum+=int(items)
