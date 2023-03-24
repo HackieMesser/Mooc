@@ -2,5 +2,11 @@
 #input_exercises=input("Exercises completed: ")
 input_students="students1.csv"
 input_exercises="exercises1.csv"
+
 with open(input_students) as students:
-with open(input_exercises) as exercises:
+    for line in students:
+        listy=line.split(";")
+        #listy.strip()
+        print(listy)
+
+#with open(input_exercises) as exercises:
