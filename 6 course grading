@@ -1,2 +1,4 @@
+input_students=input("Student information: ")
+input_exercises=input("Exercises completed: ")
 with open(input_students) as students:
 with open(input_exercises) as exercises:
