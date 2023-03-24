@@ -1,1 +1,2 @@
-
+with open(input_students) as students:
+with open(input_exercises) as exercises:
