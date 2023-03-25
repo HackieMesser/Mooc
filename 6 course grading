@@ -6,7 +6,9 @@ input_exercises="exercises1.csv"
 with open(input_students) as students:
     for line in students:
         listy=line.split(";")
-        #listy.strip()
+        for part in listy:
+            part=part.strip()
+            print(part)
         print(listy)
 
 #with open(input_exercises) as exercises:
