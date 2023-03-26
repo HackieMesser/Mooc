@@ -19,6 +19,7 @@ with open(input_exercises) as exercises:
     lista=[]
     for line in exercises:
         line=line.split(";")
-        print(line)
+        lista.append(line)
+    print(lista)
 
 #with open(input_exercises) as exercises:
