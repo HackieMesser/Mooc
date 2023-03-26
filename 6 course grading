@@ -19,11 +19,11 @@ with open(input_exercises) as exercises:
     lista=[]
     for line in exercises:
         line=line.split(";")
-        lista.append(line)
+        listu=[]
         for part in line:
             part=part.strip()
-            lista.append(part)
-
+            listu.append(part)
+        lista.append(listu)
     print(lista)
 
 #with open(input_exercises) as exercises:
