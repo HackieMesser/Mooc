@@ -20,9 +20,10 @@ with open(input_exercises) as exercises:
     for line in exercises:
         line=line.split(";")
         lista.append(line)
-    for part in lista:
-        part=part.strip()
-        
+        for part in line:
+            part=part.strip()
+            lista.append(part)
+
     print(lista)
 
 #with open(input_exercises) as exercises:
