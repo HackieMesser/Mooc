@@ -14,4 +14,11 @@ with open(input_students) as students:
         listo.append(listeen)
         print(listo)
 
+
+with open(input_exercises) as exercises:
+    lista=[]
+    for line in exercises:
+        line=line.split(";")
+        print(line)
+
 #with open(input_exercises) as exercises:
