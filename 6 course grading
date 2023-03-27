@@ -12,7 +12,8 @@ with open(input_students) as students:
             part=part.strip()
             listeen.append(part)
         listo.append(listeen)
-        print(listo)
+    listo=listo[1:]
+    print(listo)
 
 
 with open(input_exercises) as exercises:
@@ -24,6 +25,8 @@ with open(input_exercises) as exercises:
             part=part.strip()
             listu.append(part)
         lista.append(listu)
+    lista=lista[1:]
     print(lista)
+
 
 #with open(input_exercises) as exercises:
