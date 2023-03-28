@@ -31,8 +31,13 @@ with open(input_exercises) as exercises:
             listu.append(part)
         lista.append(listu)
     lista=lista[1:]
+    grade=0
     for x in lista:
-        grades[x[0]]=int(x[1])
+        for y in range(1,len(x)):
+            grade+=int(x[y])
+        grade=grade/(len(x)-1)
+        print(grade)
+        #grades[x]=grade
     print(grades)
             
 
