@@ -3,7 +3,8 @@
 input_students="students1.csv"
 input_exercises="exercises1.csv"
 
-dictionary={}
+names={}
+grades={}
 with open(input_students) as students:
     
     listo=[]
@@ -17,8 +18,8 @@ with open(input_students) as students:
     listo=listo[1:]
     print(listo)
     for x in listo:
-        dictionary[x[0]]=x[1]+" "+x[2]
-        print(dictionary)
+        names[x[0]]=x[1]+" "+x[2]
+        #print(names)
 
 with open(input_exercises) as exercises:
     lista=[]
@@ -30,7 +31,10 @@ with open(input_exercises) as exercises:
             listu.append(part)
         lista.append(listu)
     lista=lista[1:]
-    #print(lista)
+    for x in lista:
+        grades[x[0]]=int(x[1])
+    print(grades)
+            
 
 
 #with open(input_exercises) as exercises:
