@@ -37,7 +37,7 @@ with open(input_exercises) as exercises:
             grade+=int(x[y])
         grade=grade/(len(x)-1)
         print(grade)
-        #grades[x]=grade
+        grades[x[0]]=grade
     print(grades)
             
 
