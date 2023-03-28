@@ -3,7 +3,9 @@
 input_students="students1.csv"
 input_exercises="exercises1.csv"
 
+dictionary={}
 with open(input_students) as students:
+    
     listo=[]
     for line in students:
         listy=line.split(";")
@@ -14,7 +16,9 @@ with open(input_students) as students:
         listo.append(listeen)
     listo=listo[1:]
     print(listo)
-
+    for x in listo:
+        dictionary[x[0]]=x[1]+" "+x[2]
+        print(dictionary)
 
 with open(input_exercises) as exercises:
     lista=[]
@@ -26,7 +30,7 @@ with open(input_exercises) as exercises:
             listu.append(part)
         lista.append(listu)
     lista=lista[1:]
-    print(lista)
+    #print(lista)
 
 
 #with open(input_exercises) as exercises:
