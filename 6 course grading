@@ -45,8 +45,11 @@ with open(input_exercises) as exercises:
 
 print(grades)
 print(names)
-
+printer={}
 for x,y in grades.items():
-    print(x)
-    print(y)
+    for a,b in names.items():
+        if x == a:
+            printer[b]=y
+            print(printer)
+
 #with open(input_exercises) as exercises:
