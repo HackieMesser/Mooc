@@ -1,7 +1,7 @@
-#input_students=input("Student information: ")
-#input_exercises=input("Exercises completed: ")
-input_students="students1.csv"
-input_exercises="exercises1.csv"
+input_students=input("Student information: ")
+input_exercises=input("Exercises completed: ")
+#input_students="students1.csv"
+#input_exercises="exercises1.csv"
 
 names={}
 grades={}
@@ -16,7 +16,7 @@ with open(input_students) as students:
             listeen.append(part)
         listo.append(listeen)
     listo=listo[1:]
-    print(listo)
+    #print(listo)
     for x in listo:
         names[x[0]]=x[1]+" "+x[2]
         #print(names)
@@ -38,13 +38,13 @@ with open(input_exercises) as exercises:
             grade+=int(x[y])
         #grade=grade/(len(x)-1)
         #grade="{:.2f}".format(grade)
-        print(grade)
+        #print(grade)
         grades[x[0]]=grade
     #print(grades)
             
 
-print(grades)
-print(names)
+#print(grades)
+#print(names)
 printer={}
 for x,y in grades.items():
     for a,b in names.items():
