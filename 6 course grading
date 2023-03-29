@@ -46,6 +46,7 @@ with open(input_exercises) as exercises:
 print(grades)
 print(names)
 
-for x in grades:
+for x,y in grades.items():
     print(x)
+    print(y)
 #with open(input_exercises) as exercises:
