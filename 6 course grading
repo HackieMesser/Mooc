@@ -50,6 +50,8 @@ for x,y in grades.items():
     for a,b in names.items():
         if x == a:
             printer[b]=y
-            print(printer)
+            #print(printer)
 
+for t,y in printer.items():
+    print(f"{t} {y}")            
 #with open(input_exercises) as exercises:
