@@ -40,8 +40,12 @@ with open(input_exercises) as exercises:
         grade="{:.2f}".format(grade)
         print(grade)
         grades[x[0]]=grade
-    print(grades)
+    #print(grades)
             
 
+print(grades)
+print(names)
 
+for x in grades:
+    print(x)
 #with open(input_exercises) as exercises:
