@@ -64,8 +64,17 @@ exam_points= "exam_points1.csv" #input("Exam points:")
 students={}
 with open(student_data) as file:
     for row in file:
-        print(row)
-        #parts=row.split(";")
-        #if parts[0] == "id":
-            #continue
-        #students[parts[0]]=f"{parts[1]} {parts[2].strip()}"
+        parts=row.split(";")
+        if parts[0] == "id":
+            continue
+        students[parts[0]]=f"{parts[1]} {parts[2].strip()}"
+    #for x in students:
+        #print(students[x])
+exercises={}
+with open(exercise_data) as file:
+    for row in file:
+        parts=row.split(";")
+        print(parts)
+            
+        
+        
